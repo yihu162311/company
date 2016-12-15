@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="author" content="BrickCarvingArtist" />
+		<title>Todo List</title>
+		<link rel="stylesheet" href="./css/todoList.css" />
+		<style>
+			h1{
+				margin:60px 0 40px;
+				text-align:center;
+				font-size:50px;
+			}
+			.todolist{
+				margin:0 auto;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Todo List</h1>
+		<script src="./js/todoList.js"></script>
+		<script>
+			// 调用用TodoList
+			TodoList({
+				// 选择向页面添加的父容器
+				element : document.body,
+				// TodoList渲染到页面后会自动调用此方法
+				mounted : function(setData/* 必需调用此方法并传入类似以下数据格式才能导入外部数据 */){
+					// 1.异步请求数据设置方式
+					setTimeout(function(){
+						setData(["任务1", "任务2", "任务3", "喜欢请收藏", "砖雕艺术家出品"], function(){
+							console.info("异步数据设置成功！");
+						}/* 设置成功后的回调函数 */);
+					}, 666);
+					// 2.同步请求数据设置方式
+					// setData(["任务1", "任务2", "任务3", "喜欢请收藏", "砖雕艺术家出品"], function(){
+					// 	console.info("异步数据设置成功！");
+					// });
+				}
+			});
+		</script>
+	</body>
+</html>

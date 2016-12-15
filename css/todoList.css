@@ -1,0 +1,141 @@
+*{
+	margin:0;
+	padding:0;
+	font-family:Helvetica Neue, Microsoft Yahei;
+	line-height:1;
+}
+ul{
+	list-style:none;
+}
+input[type="checkbox"]{
+	text-align:center;
+	-webkit-appearance:none;
+	border:1px solid rgb(204, 204, 204);
+	font-family:monospace;
+	outline:none;
+	transition:all .15s;
+}
+input[type="checkbox"]:not(:checked):hover{
+	border-color:rgb(51, 153, 255);
+}
+input[type="checkbox"]:checked{
+	background-color:rgb(51, 153, 255);
+	color:white;
+}
+input[type="checkbox"]:after{
+	font-weight:bold;
+}
+input[type="checkbox"]:checked:after{
+	content:"√";
+}
+.todoList{
+	padding:10px;
+	width:578px;
+	border:1px solid rgb(204, 204, 204);
+	box-shadow:0 8px 12px 0 rgb(204, 204, 204);
+}
+/* 输入栏样式 */
+.todoList .inputBar{
+	padding:10px 0 20px;
+	height:40px;
+	border-bottom:1px solid rgb(204, 204, 204);
+}
+.todoList .inputBar input{
+	vertical-align:middle;
+}
+.todoList .inputBar input[type="checkbox"]{
+	width:40px;
+	height:40px;
+	font-size:28px;
+	line-height:40px;
+}
+.todoList .inputBar .userInput{
+	margin-left:10px;
+	padding:0 10px;
+	box-sizing:content-box;
+	width:506px;
+	height:38px;
+	border:1px solid rgb(204, 204, 204);
+	font-size:20px;
+	line-height:38px;
+	letter-spacing:1px;
+	outline:none;
+	transition:border-color .25s;
+}
+.todoList .inputBar .userInput:focus{
+	border-color:rgb(102, 102, 102);
+}
+/* 任务栏样式 */
+.todoList .tasks li{
+	padding:10px 5px;
+	height:30px;
+	border-bottom:1px solid rgb(204, 204, 204);
+}
+.todoList .tasks li input, .todoList .tasks li p{
+	float:left;
+}
+.todoList .tasks li input{
+	margin:3px;
+	width:24px;
+	height:24px;
+	font-size:16px;
+	line-height:24px;
+}
+.todoList .tasks li p{
+	margin-left:10px;
+	width:480px;
+	font-size:18px;
+	line-height:30px;
+	color:rgb(51, 51, 51);
+	transition:text-decoration, color .25s;
+}
+.todoList .tasks li p.checked{
+	text-decoration:line-through;
+	color:rgb(153, 153, 153);
+}
+.todoList .tasks li a{
+	float:right;
+	font-size:30px;
+	color:rgb(102, 102, 102);
+	cursor:pointer;
+	transition:color .15s;
+}
+.todoList .tasks li a:hover{
+	color:red;
+}
+/* 状态栏样式 */
+.todoList .statusBar{
+	margin-top:10px;
+	overflow:hidden;
+}
+.todoList .statusBar span{
+	float:left;
+	margin-right:70px;
+	font-size:14px;
+}
+.todoList .statusBar span, .todoList .statusBar b{
+	line-height:30px;
+}
+.todoList .statusBar a{
+	float:left;
+	margin-left:10px;
+	padding:8px 14px;
+	border:1px solid rgb(204, 204, 204);
+	border-radius:4px;
+	font-size:12px;
+	cursor:pointer;
+	transition:color, border-color .25s;
+}
+.todoList .statusBar a:hover, .todoList .statusBar a.current{
+	border-color:red;
+	color:red;
+}
+.todoList .statusBar b{
+	float:right;
+	font-size:14px;
+	cursor:pointer;
+	transition:color .15s;
+}
+.todoList .statusBar b:hover{
+	color:red;
+}
